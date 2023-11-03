@@ -1,0 +1,17 @@
+#!desc=潮汐解锁
+#!homepage=https://github.com/thebestkyle323/Quantumult-x/blob/main/chaoxi.js
+name: Tide
+desc: 潮汐解锁
+http:
+  mitm:
+    - "tide-api.moreless.io"
+  script:
+    - match: ^https?:\/\/tide-api\.moreless\.io\/v\d\/users\/self
+      name: tide
+      type: response
+      require-body: true
+      timeout: 10
+script-providers:
+  tide:
+    url: https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/chaoxi.js
+    interval: 86400
